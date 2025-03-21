@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 顧客管理アプリ
 
-## Getting Started
+このアプリは、顧客情報を管理するためのシンプルなWebアプリケーションです。  
+ログイン機能、顧客検索機能、並び替えボタンを備えています。
 
-First, run the development server:
+## 🚀 セットアップ・使用技術・実装機能・動作確認方法
 
-```bash
+```sh
+# 【セットアップ手順】
+# リポジトリをクローン
+git clone https://github.com/takaya0307/funrepeatassignment.git
+cd funrepeatassignment
+
+# 必要なパッケージをインストール
+npm install
+
+# 開発サーバーを起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# ブラウザでアプリを開く
+# http://localhost:3000 にアクセス
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 【使用した技術・ライブラリ】
+# - Next.js 14 - Reactベースのフレームワーク
+# - React 18 - コンポーネントベースのUIライブラリ
+# - TypeScript - 型安全なJavaScript
+# - Tailwind CSS - ユーティリティファーストのCSSフレームワーク
+# - React Hooks (useState, useEffect, useRouter) - 状態管理・ルーティングに利用
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 【実装した機能】
+# - ログイン機能
+#   - ユーザーIDとパスワードの入力フォーム
+#   - 空欄の場合エラーメッセージを表示
+#   - ログインボタン
+# - ゲストモード
+#   - ボタンを押すと /client に遷移
+# - 顧客管理画面
+#   - 顧客一覧を表示
+#   - 検索フォームで顧客名をフィルタリング
+#   - 登録日で並べ替えるボタン
+#   - ログアウトボタン
 
-## Learn More
+# 【動作確認方法】
+# 1. 開発サーバーを起動
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# 2. ブラウザで以下のURLにアクセス
+# http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 3. 以下の動作を確認
+# - ユーザーID・パスワードを入力 → 「ログイン」ボタン（空の場合はエラーメッセージを表示）
+# - 「ゲストモード」ボタンで /client に遷移
+# - http://localhost:3000/client で顧客管理ページを確認
+# - 検索フォームで顧客名のフィルタリングができるか確認
+# - 登録日で並べ替えるボタンを押すと並び替える
+# - ログアウトボタンを押すと / に遷移
